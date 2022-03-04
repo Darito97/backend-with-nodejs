@@ -25,10 +25,6 @@ let notes = [
 app.get('/', (req, res) => {
   res.status(200).send('<h1>Hola mundo!</h1>')
 })
-
-app.get('/graunt', (req, res) => {
-  res.status(200).send('<h1>Hola Graunt</h1>')
-})
 app.get('/api/notes', (req, res) => {
   res.json(notes)
 })
