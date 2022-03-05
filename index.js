@@ -84,6 +84,12 @@ app.put('/api/notes/:id', (req, res) => {
   }
 })
 
+const unknownEndPoint = (req, res) => {
+  res.status(404).json({ error: 'unknown endpoint' })
+}
+
+app.use(unknownEndPoint)
+
 const PORT = 3001
 app.listen(PORT, () => {
   console.log('server runing on port ' + PORT)
